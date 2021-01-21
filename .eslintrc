@@ -2,7 +2,7 @@
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "tsconfigRootDir": ".",
-    "project": ["./tsconfig.json"]
+    "project": ["./tsconfig.eslint.json"]
   },
   "plugins": ["@typescript-eslint", "prettier", "simple-import-sort"],
   "extends": [
@@ -15,6 +15,7 @@
     "plugin:prettier/recommended"
   ],
   "rules": {
+    "@typescript-eslint/no-explicit-any": "off",
     "import/order": "off",
     "simple-import-sort/exports": "error",
     "simple-import-sort/imports": "error",
