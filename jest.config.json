@@ -1,0 +1,8 @@
+{
+  "collectCoverage": true,
+  "coverageReporters": ["html", "json", "lcovonly", "text-summary"],
+  "modulePathIgnorePatterns": ["<rootDir>/dist/"],
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "verbose": true
+}

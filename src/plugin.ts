@@ -1,11 +1,12 @@
 import * as fs from 'fs';
 import { parse } from 'json5';
-import type { SnowpackPlugin, SnowpackPluginFactory } from 'snowpack';
+
+import { SnowpackPluginJSON5 } from './plugin.interfaces';
 
 /**
  * Plugin
  */
-export const plugin: SnowpackPluginFactory = (): SnowpackPlugin => ({
+export const plugin: () => SnowpackPluginJSON5 = (): SnowpackPluginJSON5 => ({
   name: 'snowpack-plugin-json5',
   resolve: {
     input: ['.json5'],
