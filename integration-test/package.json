@@ -1,0 +1,10 @@
+{
+  "name": "snowpack-plugin-json5-integration-test",
+  "private": true,
+  "scripts": {
+    "build": "snowpack build --config ./snowpack.config.js"
+  },
+  "devDependencies": {
+    "snowpack": "3.0.x"
+  }
+}

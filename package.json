@@ -15,11 +15,13 @@
   ],
   "main": "./index.js",
   "scripts": {
-    "build": "tsc --project tsconfig.json && copyfiles \"package.json\" \"README.md\" \"LICENSE\" dist",
-    "clean": "rimraf dist",
+    "build": "rimraf dist && tsc --project tsconfig.json && copyfiles \"package.json\" \"README.md\" \"LICENSE\" \"dist\"",
     "lint": "eslint src/**/*.{ts,tsx} --max-warnings 0",
     "lint:fix": "eslint --fix src/**/*.{ts,tsx}",
-    "test": "jest"
+    "test": "jest ./test/*",
+    "test:integration": "npm run build && npm run test:integration:install && npm run test:integration:build && jest ./integration-test/*",
+    "test:integration:install": "cd integration-test && npm ci && cd ../dist && copyfiles \"**\" \"../integration-test/node_modules/snowpack-plugin-json5\" && cd ..",
+    "test:integration:build": "rimraf ./integration-test/dist && cd integration-test && npm run build && cd .."
   },
   "dependencies": {
     "json5": "2.1.x"
