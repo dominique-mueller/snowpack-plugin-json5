@@ -15,7 +15,7 @@
   ],
   "main": "./index.js",
   "scripts": {
-    "build": "rimraf dist && tsc --project tsconfig.json && copyfiles \"package.json\" \"README.md\" \"LICENSE\" \"dist\"",
+    "build": "rimraf dist && tsc --project tsconfig.json && copyfiles \"package.json\" \"README.md\" \"CHANGELOG.md\" \"LICENSE\" \"dist\"",
     "lint": "eslint src/**/*.{ts,tsx} --max-warnings 0",
     "lint:fix": "eslint --fix src/**/*.{ts,tsx}",
     "test": "jest ./test/*",
