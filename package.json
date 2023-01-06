@@ -24,7 +24,7 @@
     "test:integration:build": "rimraf ./integration-test/dist && cd integration-test && npm run build && cd .."
   },
   "dependencies": {
-    "json5": "2.1.x"
+    "json5": "2.2.x"
   },
   "peerDependencies": {
     "snowpack": "3.x"
